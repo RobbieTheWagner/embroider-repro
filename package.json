@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "repository": "",
+  "license": "MIT",
+  "author": "",
+  "scripts": {
+    "build": "pnpm --filter embroider-repro build",
+    "lint": "pnpm --filter '*' lint",
+    "lint:fix": "pnpm --filter '*' lint:fix",
+    "prepare": "pnpm build",
+    "start": "concurrently 'pnpm:start:*' --restart-after 5000 --prefixColors auto",
+    "start:addon": "pnpm --filter embroider-repro start --no-watch.clearScreen",
+    "start:test-app": "pnpm --filter test-app start",
+    "test": "pnpm --filter '*' test",
+    "test:ember": "pnpm --filter '*' test:ember"
+  },
+  "packageManager": "pnpm@10.0.0",
+  "devDependencies": {
+    "@glint/core": "^1.2.1",
+    "concurrently": "^9.1.2",
+    "prettier": "^3.0.3",
+    "prettier-plugin-ember-template-tag": "^2.0.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "@embroider/macros": "~1.16.13"
+    }
+  }
+}
