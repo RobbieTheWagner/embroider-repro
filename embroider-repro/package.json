@@ -99,8 +99,6 @@
     "version": 2,
     "type": "addon",
     "main": "addon-main.cjs",
-    "app-js": {
-      "./components/hds-interactive.js": "./dist/_app_/components/hds-interactive.js"
-    }
+    "app-js": {}
   }
 }
