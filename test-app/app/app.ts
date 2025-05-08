@@ -4,6 +4,10 @@ import loadInitializers from 'ember-load-initializers';
 import config from 'test-app/config/environment';
 import { importSync, isDevelopingApp, macroCondition } from '@embroider/macros';
 
+import { repro } from 'embroider-repro';
+
+repro();
+
 if (macroCondition(isDevelopingApp())) {
   importSync('./deprecation-workflow');
 }
